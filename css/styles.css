@@ -1,0 +1,23 @@
+.logo {
+    width: 150px;
+}
+.logo-wrapper {
+    flex-direction: row;
+    background: hsl(0, 0%, 14.5%);
+    width: 230px;
+    height: 230px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 2px 11.5px 46px hsla(0, 0%, 0%, 0.35);
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.logo-wrapper__position {
+    position: relative;
+    top: -4%;
+    text-align: center;
+    width: 100%;
+    display: block;
+}

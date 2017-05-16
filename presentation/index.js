@@ -3,7 +3,7 @@ import Clock from "./clock";
 import styles from "../css/styles.css";
 
 import {
-  BlockQuote, Cite, CodePane, Deck, S,
+  BlockQuote, CodePane, Deck, S,
   Heading, Image, ListItem, List, Quote, Slide, Text,
   Table, TableRow, TableItem
 } from "spectacle";
@@ -101,40 +101,53 @@ export default class Presentation extends React.Component {
             textSize="25"
           />
         </Slide>
+        <CodeSlide
+          lang="jsx"
+          code={require("raw-loader!../assets/wrapApp.example")}
+          textSize="20"
+          ranges={[
+            { loc: [0, 18], title: "Put the app inside a Router wrapper" },
+            { loc: [1, 2], title: "Put the app inside a Router wrapper" },
+            { loc: [15, 16], title: "Put the app inside a Router wrapper" },
+            { loc: [4, 7], title: "Create the navigation" },
+            { loc: [11, 14], title: "Put the routes in the spot" }
+          ]}
+        />
+        <CodeSlide
+          lang="jsx"
+          code={require("raw-loader!../assets/components.example")}
+          textSize="20"
+          ranges={[
+            { loc: [0, 18], title: "Components" }
+          ]}
+        />
+        <CodeSlide
+          lang="jsx"
+          code={require("raw-loader!../assets/complexComponents.example")}
+          textSize="15"
+          ranges={[
+            { loc: [0, 27], title: "Passing parameters" },
+            { loc: [28, 33], title: "Passing parameters" }
+          ]}
+        />
         <Slide>
-          <Heading size={5} textColor="tertiary">Put the app inside a Router wrapper</Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/wrapApp.example")}
-            margin="20px auto"
-            textSize="22"
-          />
+          <Heading size={3} textColor="tertiary">Two kinds of URL</Heading>
         </Slide>
         <Slide>
-          <Heading size={1} textColor="tertiary">Components</Heading>
-
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/funcComponent.example")}
-            margin="20px auto"
-            textSize="20"
-          />
-
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/classComponent.example")}
-            margin="20px auto"
-            textSize="20"
-          />
-
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/declareComponent.example")}
-            margin="20px auto"
-            textSize="20"
-          />
+          <Text textColor="secondary"><b>BrowserRouter</b>. Uses the HTML5 history API: www.example.com/users.</Text>
         </Slide>
-
+        <Slide>
+          <Text textColor="secondary"><b>HashRouter</b>. Uses the hash portion of the URL www.example.com/#/users</Text>
+        </Slide>
+        <Slide>
+          <Heading size={3} textColor="tertiary">Several URL params?</Heading>
+        </Slide>
+        <Slide>
+          <Text textSize="30" textColor="secondary">www.example.com/users/searchcity/Phnom+Penh/order/ascendant/isactive/true </Text>
+        </Slide>
+        <Slide>
+          <Text textSize="30" textColor="secondary">www.example.com/users?searchcity=Phnom+Penh&order=ascendant&isactive=true </Text>
+        </Slide>
         <Slide>
           <Heading size={6} bold textColor="quartenary">Components</Heading>
           <Heading size={4} textColor="tertiary">Props</Heading>

@@ -3,7 +3,7 @@ import Logo from "./logo";
 import styles from "../css/styles.css";
 
 import {
-  CodePane, Deck, S,
+  CodePane, Deck, S, BlockQuote, Quote, Cite,
   Heading, ListItem, List, Slide, Text
 } from "spectacle";
 import CodeSlide from "spectacle-code-slide";
@@ -51,7 +51,15 @@ export default class Presentation extends React.Component {
             <span style={{ color: "#fff" }}>Josep Dominguez Leon</span> @ <span style={{ color: "red" }}>DMI</span> Phnom Penh 2017
           </Text>
         </Slide>
-
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <BlockQuote>
+            <Quote style={{ fontSize: "28px" }}>Our previous API was fighting against React. With v4, our only API is components
+             that receive props, so, <u>it's hard to imagine a big change again</u>. Now that we're embracing
+             (not fighting) React's declarative composability, we think this API will last as long as
+             React itself, because that's all it is.</Quote>
+            <Cite>React Router collaborator</Cite>
+          </BlockQuote>
+        </Slide>
         <Slide>
           <Heading size={3} textColor="tertiary">What is React Router?</Heading>
           <Text textColor="secondary" margin="20px 0 0">
@@ -75,6 +83,7 @@ export default class Presentation extends React.Component {
         <Slide>
           <Heading size={5} textColor="tertiary">Why do you need a Router?</Heading>
           <List textSize="30px" textColor="secondary">
+            <ListItem>Maybe you don't</ListItem>
             <ListItem>It allows you to define what happens in each route of your app.</ListItem>
             <ListItem>It keeps your UI in sync with the route.</ListItem>
             <ListItem>Provides components to change the route, e.g, "Link" component.</ListItem>
@@ -85,6 +94,9 @@ export default class Presentation extends React.Component {
           <Text textColor="secondary">
             Probably not in small applications doing simple tasks, like, "ToDo list".<br/> <b>That's why it's detached from React. </b>
           </Text>
+        </Slide>
+        <Slide>
+          <Heading size={1} textColor="tertiary">How it works?</Heading>
         </Slide>
         <Slide>
           <Heading size={5} textColor="tertiary">First step: import</Heading>
@@ -128,12 +140,12 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="tertiary">Two types of &lt;Router&gt;</Heading>
         </Slide>
         <Slide>
-          <Text textColor="secondary">www.example.com/users<br/><br/>
-          <b>BrowserRouter</b>. Uses HTML5 History API</Text>
-        </Slide>
-        <Slide>
           <Text textColor="secondary">www.example.com/#/users<br/><br/>
           <b>HashRouter</b>. Hash portion of the URL</Text>
+        </Slide>
+        <Slide>
+          <Text textColor="secondary">www.example.com/users<br/><br/>
+          <b>BrowserRouter</b>. Uses HTML5 History API</Text>
         </Slide>
         <Slide>
           <Heading size={3} textColor="tertiary">Several URL params</Heading>
@@ -160,9 +172,10 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={5} textColor="tertiary">More information</Heading>
-          <Text textColor="secondary" textSize="35" margin="20px 0 0">
-            https://www.npmjs.com/package/react-router4
-          </Text>
+          <List textSize="30px" textColor="secondary">
+            <ListItem>https://www.npmjs.com/package/react-router4</ListItem>
+            <ListItem>https://reacttraining.com/react-router/</ListItem>
+          </List>
         </Slide>
       </Deck>
     );

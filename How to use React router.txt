@@ -1,3 +1,34 @@
+Meeting notes,
+
+Slide 1. 
+- I will talk about React Router. 
+- This library started development in mid 2014
+- It's the most used library for routing React Applications.
+- Unlike other libraries like Redux or Drag'n'Drop, the creators are not part of Facebook. 
+- Now it's in V.4. It's been a bit controversial as each new version was not backwards compatible, which made some developers to complain.
+
+Slide 2. 
+https://www.npmjs.com/package/react-router4
+- According to the creators, 
+- In V.5 they will probably say the same.
+
+Slide 4.
+Two packages available
+
+Slide 9.
+- Out of this 3 lines, only the one matching the route will be rendered
+
+Slide 10. Components.
+- Stateless component, it cout be a class with a complete Component with State.
+- https://reacttraining.com/react-router/web/example/basic
+
+Slide 13. HashRouter: No browser compatibility problems
+
+Slide 15. Several URL params. Fictional situation. We finish our application, works perfectly. But our customer tells us, "I want to enter your page, but I want the list to be ordered by Creation Date, and the city Filter only for Phnom Penh.
+
+http://stopwatch.onlineclock.net/
+
+
 
 - What is React Router?
 React Router is a compound of NPM javascript packages that provide routing for your React application. 

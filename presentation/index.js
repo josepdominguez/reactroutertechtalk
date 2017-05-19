@@ -45,7 +45,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom"]} bgColor="primary">
           <Text textColor="tertiary" bold>Introduction to React Router v.4</Text>
           <Heading size={4} caps lineHeight={1} textColor="secondary">Tech-Talk</Heading>
-          <S type="italic" textColor="secondary" textSize="20px" lineHeight={1}>A JAVASCRIPT LIBRARY FOR ROUTING YOUR APP</S>
+          <S type="italic" textColor="secondary" textSize="20px" lineHeight={1}>A LIBRARY FOR ROUTING YOUR APP</S>
           <Logo />
           <Text style={{ fontSize: "20px" }} margin="10px 0 0" textColor="secondary">
             <span style={{ color: "#fff" }}>Josep Dominguez Leon</span> @ <span style={{ color: "red" }}>DMI</span> Phnom Penh 2017

@@ -1,0 +1,47 @@
+
+- What is React Router?
+React Router is a compound of NPM javascript packages that provide routing for your React application. 
+
+- Does it only work for web?
+No! react-router-dom aimed to web apps, and react-router-native is aimed to React Native apps. But this presentation will focus on react-router-dom.
+
+- What do you need React Router for?
+	1. It allows you to create routes for your React Application. 
+	2. It keeps your UI in sync with the route 
+	3. Provides components to do the actual change of route, e.g, "Link" component.
+ 
+- Do you need React Router in every React application?
+NO, normally you will not need it in small applications doing simple tasks, e.g, Todo list page. Or you may want to develop your own Router and reinvent the wheel. That's why it's detached from React. Anyway, it helps when you want to implement navigation in your application.
+- How can you implement the simplest routed App with React Router?
+	1. create-react-app routed-app
+	2. cd routed-app
+	3. yarn add react-router-dom
+	4. Create your components
+	5. All the routed app has to be inside a Router wrapper
+	6. The "Link" component updates the URL, by adding a new entry to the browser history.
+	7. The "Route" component defines the physical space where the route will appear, if it's matched
+	8. Routes inside component. This means, try to match a route with a topic Id. If no topicId, just render "Please select a topic":
+		<Route path={`${match.url}/:topicId`} component={Topic}/> <--- If route is found, renders Topic module
+		<Route exact path={match.url} render={() => (
+		  <h3>Please select a topic.</h3> <--- Fallback route
+		)}/>
+- Two working modes
+	1. BrowserRouter. Uses the HTML5 history API www.example.com/users. 
+	2. HashRouter. Uses the hash portion of the URL www.example.com/#/users.
+- Params to share specific UX configurations. Let's say the customer asks us to have direct access to a certain filter configuration. We have to options, you decide which you like more:
+	www.example.com/users/searchcity/Phnom+Penh/order/ascendant/isactive/true <-- No extra dependencies
+	www.example.com/users?searchcity=Phnom+Penh&order=ascendant&isactive=true <-- retro compatibility with older links. We may need npm like query-string to add/remove params from URL.
+
+Thanks for your attention
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Talk about hashed routes
+	
+https://reacttraining.com/react-router/web/guides/quick-start

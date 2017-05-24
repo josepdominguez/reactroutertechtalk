@@ -1,26 +1,51 @@
-Meeting notes,
+1. Put all to slides to reset
+
+http://localhost:3000/?presenter#/0?presenter in presenter window
 
 Slide 1. 
 - I will talk about React Router. 
 - This library started development in mid 2014
 - It's the most used library for routing React Applications.
-- Unlike other libraries like Redux or Drag'n'Drop, the creators are not part of Facebook. 
+- Unlike other libraries like Redux or Drag'n'Drop, the creators are not part of Facebook, but a group called ReactTraining. 
 - Now it's in V.4. It's been a bit controversial as each new version was not backwards compatible, which made some developers to complain.
+- NS
 
 Slide 2. 
 https://www.npmjs.com/package/react-router4
-- According to the creators, 
-- In V.5 they will probably say the same.
+- According to the creators, changes won't be so dramatic from now on
+- In V.5 they will probably change everything and say the same.
 
+Slide 3. FE is taking over the role previously done by servers
 Slide 4.
-Two packages available
+Two packages available depending on our needs
+
+Slide 5. Read...
+
+Slide 6. Read... //Different principle than Angular, where everything is included. Both approaches have pros and cons.
+
+Slide 8. Import the dom version
 
 Slide 9.
+
 - Out of this 3 lines, only the one matching the route will be rendered
+- The "exact" param ensures that only such route is matched. If no "exact" "/2" could be accepted as "/".
+
+<Route path='/roster'/>
+// when the pathname is '/', the path does not match
+// when the pathname is '/roster' or '/roster/2', the path matches
+// If you only want to match '/roster', then you need to use
+// the "exact" prop. The following will match '/roster', but not
+// '/roster/2'
+<Route exact path='/roster'/>
+Example:
+https://reacttraining.com/react-router/web/example/basic
 
 Slide 10. Components.
 - Stateless component, it cout be a class with a complete Component with State.
 - https://reacttraining.com/react-router/web/example/basic
+
+Slide 11. Route of a route.
+- 
 
 Slide 13. HashRouter: No browser compatibility problems
 
